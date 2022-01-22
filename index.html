@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Module | Furniture Store</title>
+</head>
+<body>
+    <div id="page-preloader" class="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="div"  id="productApp">
+        <header class="header">
+            <div class="container header__container">
+                <ul class="header__list right-menu">
+                    <li class="list__item"><a href="#" class="list__link">shop</a></li>
+                    <li class="list__item"><a href="#" class="list__link">service</a></li>
+                    <li class="list__item"><a href="#" class="list__link">journal</a></li>
+                </ul>
+                <a href="#" class="header__logo">module</a>
+                <ul class="header__list left-menu">
+                    <li class="list__item"><a href="#" class="list__link">about</a></li>
+                    <li class="list__item"><a href="#" class="list__link">sign in</a></li>
+                    <li class="list__item"><a href="#" class="list__link cart">
+                        cart <span>{{cartCount.length}}</span>
+                    </a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="main">
+            <product    :cart_count="cartCount"
+                        @add-to-cart-event="updateCart"
+                        @remove-from-cart-event="decrementCart">
+            </product>
+        </main>
+        <section class="tabs">
+            <div class="container">
+                <product-tabs></product-tabs>
+            </div>
+        </section>
+        
+    </div>
+    
+ <!-- <div class="tabs">
+                <div class="tab__describtion">
+                    <p class="tab__text tab__description-text">Description</p>
+                    <div class="tab__describtion-content">
+                        <h4 class="tab__describtion-title">Emaes Molded Fiberglass Side Chair</h4>
+                        <p class="tab__describtion-text">Cubilia vestibulum interdum nisl a parturient a auctor vestibulum taciti vel bibendum tempor adipiscing suspendisse posuere libero penatibus lorem at interdum tristique iaculis redosan condimentum a ac rutrum mollis consectetur. Aenean nascetur vehicula egestas a adipiscing a est egestas suspendisse parturient diam adipiscing mattis elementum velit pulvinar suscipit sagittis facilisis facilisi tortor morbi at aliquam.</p>
+                    </div>
+                </div>
+                <div class="tab__details">
+                    <p class="tab__text tab__details-text">Detail</p>
+                    <div class="tab__details-content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Brand</th>
+                                    <td>
+                                        <p>Vitra</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Material</th>
+                                    <td>
+                                        <p>beech claer varnished, polypropylene</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>
+                                        <p>5 kg</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Height</th>
+                                    <td>
+                                        <p>79.5 cm</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> -->
+    <script src="https://unpkg.com/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>  -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
